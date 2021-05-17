@@ -25,7 +25,7 @@ class _WeatherAppState extends State<WeatherApp> {
   void getLocationData() async {
     if(await checkInternet()) {
       var weatherData = await WeatherModel().getLocationData();
-      Navigator.push(
+      Navigator.pushReplacement(
           context,
           MaterialPageRoute(
               builder: (context) =>
